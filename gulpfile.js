@@ -10,7 +10,8 @@ var opts = {
     organization: gutil.env.org,
     token: gutil.env.token,
     environments: gutil.env.env,    
-    environment: gutil.env.env    
+    environment: gutil.env.env,
+    debug: gutil.env.debug    
 }
 
 gulp.task('deploy',function(){
