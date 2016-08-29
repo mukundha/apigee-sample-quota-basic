@@ -1,12 +1,15 @@
-
-// var request = require('request')
-// var async = require('async')
-
-// var org = process.env.ORG
-// var env = process.env.ENV
 var assert = chai.assert;
-var org = 'amer-demo4'
-var env = 'test'
+
+var pathname = window.location.pathname
+var splits = pathname.split('/')
+//expected /v1/o/:orgname/e/:env/samples/:sample/test.html
+var org = splits[2]
+var env = splits[4]
+var sample = splits[6]
+
+getTestData(org,env,sample,function(data){
+	//i don have any data for this proxy
+})
 
 var url = 'http://' + org + '-' + env + '.apigee.net/quota-basic'
 describe('QuotaBasic', function(){
